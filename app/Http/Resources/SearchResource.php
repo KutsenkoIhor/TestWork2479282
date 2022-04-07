@@ -33,7 +33,6 @@ class SearchResource extends JsonResource
         if (in_array($movie, $arrMovie)) {
             return [
                 'name_cinema' => $this->name,
-                'id_cinema' => $this->id,
                 'name_movie' => $movie,
             ];
         } else {

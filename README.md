@@ -1,64 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# TestWork2479282
+## Задание
+Необходимо создать проект на Laravel (REST API), только Backend! Предметная область для данных на Ваше усмотрение. Особенности реализации:
 
-## About Laravel
+1. Проект содержит базу данных из двух таблиц со связью многие ко многим;
+2. Работа с базой должна осуществляться через паттерн репозиторий;
+3. Необходимо реализовать простую аутентификацию через ключ (не используя доп. пакеты passport, jwt etc.);
+4. API должно предоставлять доступ к данным с возможностью сортировки и поиску по нескольким полям;
+5. В процессе работы с данными необходимо использовать атрибут pivot для моделей и включить его в запросы по поиску.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+В качестве результата ссылка на GitLab/GitHub/Bitbucket на выбор, сам репозиторий назвать TestWork2479282
+А также Postman-коллекция, README с описанием и необходимыми действиями для развертывания проекта.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Необходимыми действиями для развертывания проекта.
+1. Склонировать проект на локальну машину используя команду. 
+- $ git clone https://github.com/KutsenkoIhor/TestWork2479282
+2. В проекте создаем файл .env и из файла .env.example копируем содержимое в .env
+3. В файле .env указываем даные для подключение к БД.
+- DB_DATABASE=имя БД
+- DB_USERNAME=пользователь
+- DB_PASSWORD=пароль
+4. Используем команду composer update для обновление зависомостей до последних версий и обновнелия Обновляет ваши зависимости до последних версий и обновляет composer.
+- $ composer update
+5. Используем команду php artisan migrate для создания миграй. (создаем таблицы в БД)
+- $ php artisan migrate
+6. Используем команду php artisan db:seed для автоматическое заполнения БД.
+- $ php artisan db:seed
+7. Используем команду php artisan serve для запуска тестового сервера.
+- $ php artisan serve
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Описание
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Для аутентификацию через ключ используется Bearer Token. Токен хранится в папке confit apitokens.php
+- Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89
+2. Для быстрых тестов можно использовать файл test.http в папке tmp.
+3. Патерн репозиторий представленый следующими класами:
+- CinemaMovieController
+- CinemaMovieRepository
+- and Interfaces CinemaMovieRepositoryInterface
+4. API дает возможность:
+- Посмотреть информацию по фильмах или кинотеатрах.
+- Сделать сортировку по фильмах или кинотеатрах.
+- Сделать поиск по фильму или кинотеатру.
+- Сдделать поиск и по фильму и по кинотеатру одновременно.

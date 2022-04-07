@@ -25,7 +25,6 @@ class MovieResource extends JsonResource
 
         return [
             'name_movie' => $this->name,
-            'id_movie' => $this->id,
             'cinemas' => $arrCinema,
         ];
     }
