@@ -1,6 +1,10 @@
+#GET http://127.0.0.1:8000/api/cinema
 #GET http://127.0.0.1:8000/api/movie
-#GET http://127.0.0.1:8000/api//sort/cinemas
-GET http://127.0.0.1:8000/api/cinema/sort
+#GET http://127.0.0.1:8000/api/movie/sort
+#GET http://127.0.0.1:8000/api/cinema/sort
+#GET http://127.0.0.1:8000/api/search/movie/enim
+#GET http://127.0.0.1:8000/api/search/cinema/sit
+GET http://127.0.0.1:8000/api/search?cinema=sit&movie=ut
 Accept: application/json
 Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89
 
