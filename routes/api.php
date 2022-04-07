@@ -14,11 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth_api')->get('/cinema', [CinemaMovieController::class, 'cinema']);
-Route::middleware('auth_api')->get('/movie', [CinemaMovieController::class, 'movie']);
-Route::middleware('auth_api')->get('/movie/sort', [CinemaMovieController::class, 'movieSort']);
-Route::middleware('auth_api')->get('/cinema/sort', [CinemaMovieController::class, 'cinemaSort']);
-Route::middleware('auth_api')->get('/search/movie/{name_movie}', [CinemaMovieController::class, 'movieSearch']);
-Route::middleware('auth_api')->get('/search/cinema/{name_cinema}', [CinemaMovieController::class, 'cinemaSearch']);
-Route::middleware('auth_api')->get('/search', [CinemaMovieController::class, 'search']);
+Route::middleware('auth_api')->group(function () {
+    Route::get('/cinema', [CinemaMovieController::class, 'cinema']);
+    Route::get('/movie', [CinemaMovieController::class, 'movie']);
+    Route::get('/movie/sort', [CinemaMovieController::class, 'movieSort']);
+    Route::get('/cinema/sort', [CinemaMovieController::class, 'cinemaSort']);
+    Route::get('/search/movie/{name_movie}', [CinemaMovieController::class, 'movieSearch']);
+    Route::get('/search/cinema/{name_cinema}', [CinemaMovieController::class, 'cinemaSearch']);
+    Route::get('/search', [CinemaMovieController::class, 'search']);
+});
+
+//Route::middleware('auth_api')->get('/cinema', [CinemaMovieController::class, 'cinema']);
+//Route::middleware('auth_api')->get('/movie', [CinemaMovieController::class, 'movie']);
+//Route::middleware('auth_api')->get('/movie/sort', [CinemaMovieController::class, 'movieSort']);
+//Route::middleware('auth_api')->get('/cinema/sort', [CinemaMovieController::class, 'cinemaSort']);
+//Route::middleware('auth_api')->get('/search/movie/{name_movie}', [CinemaMovieController::class, 'movieSearch']);
+//Route::middleware('auth_api')->get('/search/cinema/{name_cinema}', [CinemaMovieController::class, 'cinemaSearch']);
+//Route::middleware('auth_api')->get('/search', [CinemaMovieController::class, 'search']);
 
