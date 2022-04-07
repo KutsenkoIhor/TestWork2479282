@@ -1,0 +1,240 @@
+{
+	"id": "2082112c-aab9-b185-7917-ceb884135794",
+	"name": "TestApi",
+	"description": "",
+	"order": [
+		"02c57236-ac18-6535-6e81-85b4a5561512",
+		"6282faa5-3c1e-6b78-952c-6e073e0fb3a4",
+		"a1750b9d-67ea-8418-02fa-efee308d0dba",
+		"f74eb7de-2530-6fad-9fed-2df6b0fc1e1d",
+		"e17af0d1-bbdf-a7be-94b8-1c2d74d4bcd7",
+		"59272113-d067-cfc8-ec6d-594bbbca5c86",
+		"00bf2b0b-054d-0d30-a2be-83cbebe86566"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1649369570578,
+	"owner": "20404091",
+	"public": false,
+	"requests": [
+		{
+			"id": "00bf2b0b-054d-0d30-a2be-83cbebe86566",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/search?cinema=sit&movie=ut",
+			"queryParams": [
+				{
+					"key": "cinema",
+					"value": "sit",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "movie",
+					"value": "ut",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649371228117,
+			"name": "api/search - Поиск по нескольким параметрам",
+			"description": "Поиск по нескольким параметра одновременно",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		},
+		{
+			"id": "02c57236-ac18-6535-6e81-85b4a5561512",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/cinema",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649370139154,
+			"name": "api/cinema",
+			"description": "Выводим все икинотеатры и фильмы в етих кинотеатрах",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		},
+		{
+			"id": "59272113-d067-cfc8-ec6d-594bbbca5c86",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/search/cinema/sit",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"data": null,
+			"dataMode": "params",
+			"name": "api/search/cinema/{name_cinema}",
+			"description": "Поиск кинотеатра по названию и его фильмов",
+			"descriptionFormat": "html",
+			"time": 1649370957574,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "6282faa5-3c1e-6b78-952c-6e073e0fb3a4",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/movie",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649370448410,
+			"name": "api/movie",
+			"description": "Выводим все фильмы и конотеатры",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		},
+		{
+			"id": "a1750b9d-67ea-8418-02fa-efee308d0dba",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/movie/sort",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649370389291,
+			"name": "api/movie/sort",
+			"description": "Выводим все отсортированыи фильмы и конотеатры",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		},
+		{
+			"id": "e17af0d1-bbdf-a7be-94b8-1c2d74d4bcd7",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/search/movie/enim",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649370720796,
+			"name": "api/search/movie/{name_movie}'",
+			"description": "Поиск фильма по названию и кинотеатров",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		},
+		{
+			"id": "f74eb7de-2530-6fad-9fed-2df6b0fc1e1d",
+			"headers": "Authorization: Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer fdxfsd78f8sdaf8sdf8s9sf89sd89",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/api/cinema/sort",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1649370400534,
+			"name": "api/cinema/sort",
+			"description": "Выводим все отсортированые кинотеатры и фильмы",
+			"collectionId": "2082112c-aab9-b185-7917-ceb884135794",
+			"responses": []
+		}
+	]
+}
