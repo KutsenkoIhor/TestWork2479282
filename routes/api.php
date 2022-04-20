@@ -22,4 +22,5 @@ Route::middleware('auth_api')->group(function () {
     Route::get('/search/movie/{name_movie}', [CinemaMovieController::class, 'movieSearch']);
     Route::get('/search/cinema/{name_cinema}', [CinemaMovieController::class, 'cinemaSearch']);
     Route::get('/search', [CinemaMovieController::class, 'search']);
+//    test rout
 });
